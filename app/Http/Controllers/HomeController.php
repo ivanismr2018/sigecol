@@ -3,31 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
 
 class HomeController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('activo');
     }
 
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function index()
     {
-        $m = DB::table('colaboradores')
-                ->where('sexo','=','M')
-                ->count();
-
-        $f = DB::table('colaboradores')
-            ->where('sexo','=','F')
-            ->count();
-
-        $data = [
-            'hombres' => $m,
-            'mujeres' => $f
-        ];
-
-        return view('home',$data);
+        return view('home');
     }
 }

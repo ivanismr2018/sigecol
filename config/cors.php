@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'paths' => ['api/*','public/plantilla/plugins/datatables/Spanish.json'],
+    'paths' => ['api/*'],
 
     'allowed_methods' => ['*'],
 
