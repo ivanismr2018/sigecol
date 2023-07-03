@@ -1,2 +1,2 @@
-# sigecol
-Sistema de Gestión de Colaboradores
+# SIGECOL
+ Sistema de Gestión de Colaboradores
